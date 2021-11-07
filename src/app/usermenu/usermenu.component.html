@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-size: 26px;">Library Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="logout()" style="cursor: pointer;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/usershowbook">Get BookList</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div style="float: left; color: aliceblue;">
+      <p>Hello! User <b>{{username}}</b></p>
+    </div>
+  </nav>
+  <div>
+    <h1 style="text-align:center"  class="center" >User Menu</h1>
+  </div>
+  <div class="divimage">
+    <img src="https://images.pexels.com/photos/442420/books-shelves-architecture-wood-442420.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  class="img-fluid img-thumbnail" width="750px" height="500px" class="centerimg">
+  </div>
+  <div><button type="submit" class="btn btn-outline-primary" style="color: white; background-color: black; width: 200px; height: 75px; font-size:large; display: block;
+    margin-left: auto;
+    margin-right: auto;" onclick="window.location.href='http://localhost:4200/usershowbook'">Go To Book List</button></div>
+ 
+  
+ 
+<!-- Footer -->
+<footer class="bg-dark text-center text-white" style="margin-top: 10px;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p >
+        Sign up as a new user and download free ebooks from vast categories from this site.All files are safe and malware free.If you have any
+        issue please contact us through above social media platforms.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="http://localhost:4200/">freeebooks.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

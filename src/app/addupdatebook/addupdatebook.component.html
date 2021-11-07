@@ -1,0 +1,185 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-size: 26px;">Library Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/adminmenu">AdminMenu<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="cursor: pointer;" (click)="logout()">Log out<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <h1 style="text-align:center"  class="center" >Add or Update Books</h1>
+  </div>
+
+
+  <div *ngIf="err=='Book is added successfully'" style="margin-left: 35%; margin-right: 35%;" class="alert alert-success" role="alert">
+    {{err}}
+  </div>
+
+  <div   *ngIf="err=='Book adding is failed'" style="margin-left: 35%; margin-right: 35%;" class="alert alert-danger" role="alert">
+    {{err}}
+  </div>
+
+
+  <div *ngIf="err=='Book is updated successfully'" style="margin-left: 35%; margin-right: 35%;" class="alert alert-success" role="alert">
+    {{err}}
+  </div>
+
+  <div   *ngIf="err=='Book updating is failed'" style="margin-left: 35%; margin-right: 35%;" class="alert alert-danger" role="alert">
+    {{err}}
+  </div>
+
+  <div   *ngIf="validate==false" style="margin-left: 35%; margin-right: 35%;" class="alert alert-danger" role="alert">
+    All fields are required!
+  </div>
+
+  <div   *ngIf="upvali==false" style="margin-left: 35%; margin-right: 35%;" class="alert alert-danger" role="alert">
+   Book ID is required for update process!
+  </div>
+
+
+  <img src={{image}}  height="175px" width="120px" style="margin-left: 35%; margin-right: 35%;"/>
+  <div style="margin-left: 20%; margin-right: 35%;">
+    <input id="img" type="file"  style="float:right;" (change)="onChange($event)"/>
+  </div>
+
+  
+
+
+
+  <form [formGroup]="formgroup" (ngSubmit)="postbook()"  >
+    
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+      <label for="exampleInputID">Book ID</label>
+      <input type="number" class="form-control"   placeholder="Enter Book ID"  formControlName="BookID" >
+     
+    </div>
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+      <label for="exampleInputbookname">Book Name</label>
+      <input type="text" class="form-control"  placeholder="Enter Book Name" formControlName="BookName" />
+      
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+        <label for="exampleInputauthorname">Author</label>
+        <input type="text" class="form-control"  placeholder="Enter Author's Name" formControlName="Author"/>
+        
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+        <label for="exampleInputcategoty">Category</label>
+        <input type="text" class="form-control"  placeholder="Enter Category" formControlName="Category"/>
+        
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+        <label for="exampleInputbookname">Edition</label>
+        <input type="text" class="form-control"  placeholder="Enter Edition" formControlName="Editon"/>
+        
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+        <label for="exampleInputeditdate">Last Edit Date</label>
+        <input type="date" class="form-control"  formControlName="LastEditDate"/>
+        
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+        <label for="exampleInputlink">Link to Download</label>
+        <input type="text" class="form-control"  placeholder="Enter Link To Download" formControlName="Link" />
+        
+    </div>
+
+    <div class="form-group" style="margin-left: 35%; margin-right: 35%;">
+       
+      
+        <textarea *ngIf="hide" type="text" class="form-control" value={{image}} formControlName="CoverImage"></textarea>
+    </div>
+
+
+    
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" style="margin-left: 35%;" >Add  Book</button>
+    <button type="button" class="btn btn-primary" style="margin-left: 15%; "  (click)="putbook()" >Update Book</button>
+  </div>
+  </form>
+
+
+  
+
+  
+  
+
+
+ 
+  <!-- Footer -->
+<footer class="bg-dark text-center text-white" style="margin-top: 32px;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p >
+        Sign up as a new user and download free ebooks from vast categories from this site.All files are safe and malware free.If you have any
+        issue please contact us through above social media platforms.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="http://localhost:4200/">freeebooks.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

@@ -1,0 +1,140 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-size: 26px;">Library Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Log in
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/userlogin">Log In As User</a>
+            <a class="dropdown-item" href="/adminlogin">Log In As Admin</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/adduser">Register As User</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <h1 style="text-align:center"  class="center" >User Register</h1>
+  </div>
+
+  <div *ngIf="err=='User registered Successfully!'" style="margin-left: 25%; margin-right: 25%;" class="alert alert-success" role="alert">
+    {{err}}
+  </div>
+
+  <div   *ngIf="err=='User register failed!'" style="margin-left: 25%; margin-right: 25%;" class="alert alert-danger" role="alert">
+    {{err}}
+  </div>
+
+  <div   *ngIf="validate==false" style="margin-left: 25%; margin-right: 25%;" class="alert alert-danger" role="alert">
+    All fields are required!
+  </div>
+
+
+  <form  [formGroup]="formgroup" (ngSubmit)="adduser()">
+    <div class="forms-group" style="margin-left: 25%; margin-right: 25%;">
+      <label for="exampleInputEmail1">First Name</label>
+      <input type="text" formControlName="FirstName" class="form-control"   placeholder="Enter firstname"  />
+      
+    </div>
+    <div class="form-group" style="margin-left: 25%; margin-right: 25%;">
+      <label for="exampleInputEmail1">Last Name</label>
+      <input type="text"  formControlName="LastName" class="form-control"   placeholder="Enter lastname"  />
+    </div>
+    <div class="form-group" style="margin-left: 25%; margin-right: 25%;">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" formControlName="Email" aria-describedby="emailHelp" placeholder="Enter email" />
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group" style="margin-left: 25%; margin-right: 25%;">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control"  formControlName="Password" placeholder="Password"/>
+      <small class="form-text text-muted">Enter a strong password.</small>
+    </div>
+    <div class="form-group" style="margin-left: 25%; margin-right: 25%;">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control"  formControlName="ConfirmPassword" placeholder="Confirm password" />
+    </div>
+
+    <div class="form-group" style="margin-left: 25%; margin-right: 25%;">
+      <button type="submit"  class="btn btn-primary" style="float: left;">Register</button>
+      <button type="reset" class="btn btn-primary" style="float: right;" >Clear</button>
+    </div>
+    
+  </form>
+
+
+ 
+ 
+<!-- Footer -->
+<footer class="bg-dark text-center text-white" style="margin-top: 50px;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p >
+        Sign up as a new user and download free ebooks from vast categories from this site.All files are safe and malware free.If you have any
+        issue please contact us through above social media platforms.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="http://localhost:4200/">freeebooks.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

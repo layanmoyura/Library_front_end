@@ -1,0 +1,66 @@
+.divimage {
+  
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+  }
+  
+  div{
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding: 5px;
+  }
+  
+  
+  .service{
+      margin:0;
+      padding: 0;
+      box-sizing:border-box;
+  
+  }
+  
+  .wrapper{
+      margin-top: 10px;
+      margin:0;
+      padding: 0;
+      box-sizing:border-box;
+  }
+  
+  .wrapper h2{
+      font-size: 35px;
+      margin-bottom: 60px;
+      text-align: center;
+  }
+  
+  .team{
+      display: inline-flex;
+      text-align: center;
+      width: auto;
+      justify-content: center;
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+  
+  .team.team_member{
+      background: #fff;
+      margin: 10px;
+      margin-bottom: 50px;
+      width: 300px;
+      padding: 20px;
+      line-height: 20px;
+      color:darkslategrey ;
+      position: relative;
+  }
+  
+  .team.team_member h3{
+      color: darkslategrey;
+      font-size: 26px;
+      margin-top: 25px;
+  }
+  
+  .team.team_member p.role{
+      color: wheat;
+      font-size: 12px;
+      margin: 12px 0;
+  }

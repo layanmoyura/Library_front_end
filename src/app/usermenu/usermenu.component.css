@@ -1,0 +1,14 @@
+div{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+  }
+
