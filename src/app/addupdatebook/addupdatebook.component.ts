@@ -104,7 +104,7 @@ pageYoffset:any;
    
     this.validate=true;
      console.log(this.formgroup.value);
-     this.user.addbook(this.formgroup.value).subscribe(data => {this.err="Book is added successfully"; this.formgroup.reset()},error => this.err="Book adding is failed")
+     this.user.addbook(this.formgroup.value).subscribe(data => {this.err="Book is added successfully"; this.formgroup.reset();this.image=null;},error => this.err="Book adding is failed")
 
     }
 
@@ -128,7 +128,7 @@ pageYoffset:any;
     if(Number.isInteger(this.id)){
       this.upvali=true;
       console.log(this.formgroup.value);
-      this.user.updatebook(this.id,this.formgroup.value).subscribe(data => {this.err="Book is updated successfully"; this.formgroup.reset()},error =>{ this.err="Book updating is failed";})
+      this.user.updatebook(this.id,this.formgroup.value).subscribe(data => {this.err="Book is updated successfully"; this.formgroup.reset(); this.image=null;},error =>{ this.err="Book updating is failed";})
     }
 
     else{
